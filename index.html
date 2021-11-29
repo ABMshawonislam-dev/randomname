@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click</button>
+    <h1></h1>
+    <script>
+
+        let list = ["Shahazada Hossen","Tanvir Hossan Bappy","Rouhol Amin","Md Sohel Rana","Hasibur Rahman Hasan","Mohammed Mahmudul Hasan","Md. Obaydullah","Aziz Bin Md Muntasir","Md Raihan Biswas","Muhammad Mutakabberur Rahman","Tasnim Abdullah Aurnobb","Md Habibur Rahman","Shahinoor Alam","Mohammed Parvez J","Md Musa Kazim","Md Sumon","Farhan Ahmed","Abul Kalam Azad","Md Wahidur Rahman Rajib","Denesh Chambugong","Abdul Latif Talukder","Md Shariful Islam","Biplop","Md Hifzur Rahman","Md. Mashiour Rahman Priom","Md. Khurshed Alam Sujan","Sujoy Chakraborty"]
+
+       let button = document.querySelector("button")
+       let heading = document.querySelector("h1")
+       
+        button.addEventListener("click",function(){
+
+            let stop = setInterval(()=>{
+                heading.innerHTML = list[Math.floor(Math.random()*40)]
+            },100)
+            setTimeout(() => {
+                clearInterval(stop)
+            }, 3000);
+       })
+    </script>
+
+
+</body>
+</html>
